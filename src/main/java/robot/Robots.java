@@ -22,7 +22,7 @@ public class Robots {
 
     private void readAllBots(){
         //Reading all bots from the robots.txt file -- able to dynamically add/remove bots
-        //Would add a utils package and class to do all read files operation -- No Time issue
+        //Would add utils package and class to do all read files operation -- No Time issue
         try {
             logger.info("Reading robots configuration file located inside the resources folder @robots.txt");
             List<String>robotsTxt = FileUtils.readLines(new File(Robots.class.getResource("/robots.txt").getFile()),"UTF-8");

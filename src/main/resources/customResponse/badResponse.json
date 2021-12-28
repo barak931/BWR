@@ -1,0 +1,10 @@
+{
+  "response":{
+    "code": 500,
+    "SourceId": "{robotId}",
+    "taskIdAssigned": "{taskId}"
+  },
+  "exception": {
+    "description": "{description}"
+  }
+}
