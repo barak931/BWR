@@ -1,0 +1,4 @@
+1,plow,Robot will plow the field
+2,dig,Robot will dig holes in the field
+3,cover,Robot will cover all holes
+4,clean,Robot will clean field

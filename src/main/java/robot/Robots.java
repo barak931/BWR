@@ -1,8 +1,11 @@
 package robot;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,10 +21,18 @@ public class Robots {
     }
 
     private void readAllBots(){
-
-        logger.info("Reading robots configuration file located inside the resources folder @robots.txt");
-
-
+        //Reading all bots from the robots.txt file -- able to dynamically add/remove bots
+        //Would add a utils package and class to do all read files operation -- No Time issue
+        try {
+            logger.info("Reading robots configuration file located inside the resources folder @robots.txt");
+            List<String>robotsTxt = FileUtils.readLines(new File(Robots.class.getResource("/robots.txt").getFile()),"UTF-8");
+            for (String str:robotsTxt){
+                String[] arr = str.split(",");
+                this.robots.add(new Robot(arr[0],arr[1],Integer.parseInt(arr[2])));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 

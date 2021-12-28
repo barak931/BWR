@@ -1,0 +1,6 @@
+{
+  "requestId": "{requestId}",
+  "task": "{taskId}",
+  "sourceId": "Web application",
+  "targetId": "{robotId}"
+}

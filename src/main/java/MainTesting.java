@@ -10,14 +10,15 @@ public class MainTesting {
 
     @BeforeClass
     public void setup(){
-        logger.info("This is the Before Class setup function");
+        logger.info("Setup test function");
         Robots robots = new Robots();
         logger.info(robots.getRobot(0).getRobotName());
     }
 
-    @Test
-    public void firstTest(){
+    @Test(priority = 1)
+    public void assignCommandTest(){
         logger.info("This is the first test");
+
     }
 
 
