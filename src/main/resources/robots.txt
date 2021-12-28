@@ -1,0 +1,5 @@
+robot1,http://barak-ha.bwr.robot1.com,1
+robot2,http://barak-ha.bwr.robot2.com,2
+robot3,http://barak-ha.bwr.robot3.com,3
+robot4,http://barak-ha.bwr.robot4.com,4
+robot5,http://barak-ha.bwr.robot5.com,5
